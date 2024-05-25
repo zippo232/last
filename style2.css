@@ -1,0 +1,397 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #f3f0e8;
+    overflow: hidden;
+}
+
+canvas{
+    width: 70vw;
+    height: 85vh;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+p {
+	margin: 0 0;
+	position: absolute;
+	font: 16px Verdana;
+	color: #eee;
+	height: 25px;
+	top: calc( 100vh - 30px );
+	text-shadow: 0 0 2px white;
+}
+p a {
+	text-decoration: none;
+	color: #aaa;
+}
+span {
+	font-size: 11px;
+}
+p > a:first-of-type {
+	font-size: 20px;
+}
+
+/* ========================== */
+div.text{
+    color: rgba(0, 0, 0, .3);
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.cake{
+    width:  100%;
+    position: absolute;
+    bottom: 53px;
+}
+
+.top-layer,
+.middle-layer,
+.bottom-layer{
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 50px,
+        #fedbab 60px,
+        transparent 60px
+    ),
+    radial-gradient(
+        circle at 30px 5px,
+        #994c10 30px,
+        #fcbf29 31px
+    );
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    position: relative;
+    margin: auto;
+}
+
+.middle-layer{
+    transform: scale(.85);
+    top: 7px;
+}
+
+.top-layer{
+    transform: scale(.7);
+    top: 26px;
+}
+
+.candle{
+    height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fd3018 0,
+        #fd3018 5px,
+        #ffa89e 5px,
+        #ffa89e 10px
+    );
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 202px;
+}
+
+.candle:before{
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 45px;
+    transform: rotate(45deg);
+    left: -1px;
+}
+
+/* ============= Responsive ================== */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media screen and (min-width: 1281px) {
+    /* CSS */
+}
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* CSS */
+}
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS */
+}
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* CSS */
+    .top-layer,
+    .middle-layer,
+    .bottom-layer{
+        height: 80px;
+        width: 240px;
+        background-repeat: repeat;
+        background-size: 60px 100px;
+        background-image: linear-gradient(
+            transparent 50px,
+            #fedbab 50px,
+            #fedbab 60px,
+            transparent 60px
+        ),
+        radial-gradient(
+            circle at 30px 5px,
+            #994c10 30px,
+            #fcbf29 31px
+        );
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        position: relative;
+        margin: auto;
+    }
+
+    .middle-layer{
+        transform: scale(.85);
+        top: 7px;
+    }
+
+    .top-layer{
+        transform: scale(.7);
+        top: 26px;
+    }
+
+    .candle{
+        height: 45px;
+        width: 15px;
+        background: repeating-linear-gradient(
+            45deg,
+            #fd3018 0,
+            #fd3018 5px,
+            #ffa89e 5px,
+            #ffa89e 10px
+        );
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 202px;
+    }
+
+    .candle:before{
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: #ffa500;
+        border-radius: 0 50% 50% 50%;
+        bottom: 45px;
+        transform: rotate(45deg);
+        left: -1px;
+    }
+
+    .outside p{
+        font-size: 23px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        text-align: center;
+        letter-spacing: 6px;
+        color: #000046;
+    }
+}
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* CSS */
+    .top-layer,
+    .middle-layer,
+    .bottom-layer{
+        height: 80px;
+        width: 240px;
+        background-repeat: repeat;
+        background-size: 60px 100px;
+        background-image: linear-gradient(
+            transparent 50px,
+            #fedbab 50px,
+            #fedbab 60px,
+            transparent 60px
+        ),
+        radial-gradient(
+            circle at 30px 5px,
+            #994c10 30px,
+            #fcbf29 31px
+        );
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        position: relative;
+        margin: auto;
+    }
+
+    .middle-layer{
+        transform: scale(.85);
+        top: 7px;
+    }
+
+    .top-layer{
+        transform: scale(.7);
+        top: 26px;
+    }
+
+    .candle{
+        height: 45px;
+        width: 15px;
+        background: repeating-linear-gradient(
+            45deg,
+            #fd3018 0,
+            #fd3018 5px,
+            #ffa89e 5px,
+            #ffa89e 10px
+        );
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 202px;
+    }
+
+    .candle:before{
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: #ffa500;
+        border-radius: 0 50% 50% 50%;
+        bottom: 45px;
+        transform: rotate(45deg);
+        left: -1px;
+    }
+
+    .outside p{
+        font-size: 23px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        text-align: center;
+        letter-spacing: 6px;
+        color: #000046;
+    }
+}
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* CSS */
+    .top-layer,
+    .middle-layer,
+    .bottom-layer{
+        height: 70px;
+        width: 190px;
+        background-repeat: repeat;
+        background-size: 64px 71px;
+        background-image: linear-gradient(
+            transparent 50px,
+            #fedbab 50px,
+            #fedbab 60px,
+            transparent 60px
+        ),
+        radial-gradient(
+            circle at 32px 0px,
+            #994c10 39px,
+            #fcbf29 31px
+        );
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        position: relative;
+        margin: auto;
+    }
+
+    .middle-layer{
+        transform: scale(.85);
+        top: 7px;
+    }
+
+    .top-layer{
+        transform: scale(.7);
+        top: 26px;
+    }
+
+    .candle{
+        height: 45px;
+        width: 15px;
+        background: repeating-linear-gradient(
+            45deg,
+            #fd3018 0,
+            #fd3018 5px,
+            #ffa89e 5px,
+            #ffa89e 10px
+        );
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 172px;
+    }
+
+    .candle:before{
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: #ffa500;
+        border-radius: 0 50% 50% 50%;
+        bottom: 45px;
+        transform: rotate(45deg);
+        left: -1px;
+    }
+
+    .outside p{
+        font-size: 23px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        text-align: center;
+        letter-spacing: 6px;
+        color: #000046;
+    }
+}
